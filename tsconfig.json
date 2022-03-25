@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"],
+    "baseUrl": "./",
+    "paths": {
+      "@Application/*": ["src/application/*"],
+      "@Components/*": ["src/components/*"],
+      "@Domain/*": ["src/domain/*"],
+      "@Interfaces/*": ["src/interfaces/*"],
+      "@Pages/*": ["src/pages/*"],
+      "@Lib/*": ["src/lib/*"],
+      "@Services/*": ["src/services/*"],
+      "@Styles/*": ["src/styles/*"],
+      "@Tests/*": ["src/tests/*"]
+    }
+  },
+  "include": ["./src"]
+}

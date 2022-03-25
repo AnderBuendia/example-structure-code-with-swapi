@@ -1,0 +1,16 @@
+.details__container {
+  width: 32%;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  background: var(--bg-500);
+  border-radius: 8px;
+}
+
+.details__nameCharacter {
+  font-style: italic;
+}
+.details__characterDetails {
+  padding-inline-start: unset;
+  text-align: left;
+  list-style: square;
+}

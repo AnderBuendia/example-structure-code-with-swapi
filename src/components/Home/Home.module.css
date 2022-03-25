@@ -1,0 +1,50 @@
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.home__error {
+  background: var(--error-300);
+  padding-inline: 20px;
+  border: 3px solid var(--error-700);
+  border-radius: 4px;
+  margin: 12px;
+}
+
+.home__swapiList {
+  list-style: none;
+  padding-inline-start: unset;
+}
+
+.home__swapiCharacter {
+  padding: 5px;
+  margin-bottom: 6px;
+  border: 1px solid white;
+  border-radius: 8px;
+  background: var(--bg-500);
+}
+
+.home__swapiCharacter:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.home__swapiCharacter_focus {
+  background-color: var(--secondary-500);
+}
+
+.pagination__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagination__pages {
+  margin-inline: 6px;
+  padding: 10px;
+  background: var(--bg-300);
+  border: 2px solid #fff;
+  border-radius: 100px;
+}

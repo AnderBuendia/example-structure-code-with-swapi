@@ -1,0 +1,11 @@
+.searchForm__inputSearch {
+  background: var(--bg-300);
+  padding: 6px;
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.searchForm__inputSearch::placeholder {
+  color: #fff;
+}

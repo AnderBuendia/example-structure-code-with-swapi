@@ -1,0 +1,5 @@
+.divider__container {
+  border: 2px solid lightgray;
+  width: 85%;
+  margin-block: 20px;
+}
