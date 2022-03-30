@@ -6,6 +6,7 @@ import type { ICharacter } from '@Interfaces/domain/character.interface';
 
 const DEFAULT_PEOPLE_PAGE = 1;
 const DEFAULT_TOTAL_PAGES = 0;
+
 export type AppStoreProviderProps = {
   children: ReactNode;
 };

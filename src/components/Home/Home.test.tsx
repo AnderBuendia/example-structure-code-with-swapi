@@ -56,7 +56,6 @@ describe('Use Swapi API', () => {
       status: 404,
     });
 
-    console.log({ FETCH: window.fetch });
     render(<App />);
     expect(await screen.findByText(/Network Error/i)).toBeInTheDocument();
   });

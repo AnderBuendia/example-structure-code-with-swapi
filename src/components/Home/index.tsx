@@ -83,7 +83,7 @@ const Home: FC = () => {
 
   return (
     <div className={styles.home__container}>
-      <h1>SWAPI LIST CHARACTERS</h1>
+      <h1 className="h1">SWAPI LIST CHARACTERS</h1>
       {errorState.hasError && (
         <div className={styles.home__error}>
           <p>{errorState.message}</p>
@@ -92,7 +92,7 @@ const Home: FC = () => {
 
       <SearchForm />
 
-      <h3>CHARACTERS</h3>
+      <h3 className="h3">CHARACTERS</h3>
       {renderPeople}
 
       <Divider />

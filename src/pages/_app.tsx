@@ -2,13 +2,13 @@ import type { FC } from 'react';
 import { lazy, Suspense } from 'react';
 import '@Styles/App.css';
 import { AppStoreProvider } from '@Lib/context/app-store.context';
-import Spinner from '@Components/generic/Spinner';
+import FallbackLoading from '@Components/generic/FallbackLoading';
 
 const LazyHome = lazy(() => import('@Components/Home'));
 
 const App: FC = () => {
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback={<FallbackLoading />}>
       <AppStoreProvider>
         <div className="App">
           <LazyHome />

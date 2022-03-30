@@ -1,6 +1,5 @@
 .details__container {
-  width: 32%;
-  padding-block: 0.5rem;
+  width: 80%;
   padding-inline: 2rem;
   background: var(--bg-500);
   border-radius: 8px;

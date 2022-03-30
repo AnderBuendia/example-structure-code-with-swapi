@@ -1,9 +1,9 @@
 .home__container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin-bottom: 0.75rem;
 }
 
 .home__error {
@@ -47,4 +47,16 @@
   background: var(--bg-300);
   border: 2px solid #fff;
   border-radius: 100px;
+}
+
+.pagination__button {
+  padding-inline: 1rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: var(--bg-500);
+}
+
+.pagination__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }

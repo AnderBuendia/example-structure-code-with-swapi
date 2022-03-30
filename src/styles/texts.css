@@ -25,3 +25,9 @@ body {
 .small {
   font-size: 0.875rem;
 }
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 1.75rem;
+  }
+}

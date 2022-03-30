@@ -29,6 +29,7 @@ const Pagination: FC<PaginationProps> = ({
     <div className={styles.pagination__container}>
       <Button
         style={styles.pagination__button}
+        disableButton={!previousPage}
         handleChangeNextPage={() => handleChangeNextPage(-1)}
         title="Prev"
       />
@@ -37,6 +38,7 @@ const Pagination: FC<PaginationProps> = ({
       </div>
       <Button
         style={styles.pagination__button}
+        disableButton={!nextPage}
         handleChangeNextPage={() => handleChangeNextPage(1)}
         title="Next"
       />

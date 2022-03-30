@@ -2,8 +2,8 @@ import {
   createAdaptedCharacter,
   createAdaptedPeople,
 } from '@Services/adapters/peopleAdapter';
-import { useErrorStorage } from '@Services/storage.service';
 import { _handleError, _throwSpecificError } from '@Services/error.service';
+import { useCustomFetch } from '@Lib/hooks/useCustomFetch';
 import type {
   EndpointPeople,
   EndpointCharacter,
@@ -12,11 +12,11 @@ import type {
 export const SWAPI_URL = 'https://swapi.dev/api/people';
 
 export function usePeopleService() {
-  const { setErrorState } = useErrorStorage();
+  const { customFetch } = useCustomFetch();
 
   const getPeople = async ({ page }: { page: number }) => {
     try {
-      const response = await window.fetch(`${SWAPI_URL}/?page=${page}`);
+      const response = await customFetch(`${SWAPI_URL}/?page=${page}`);
 
       if (!response.ok) _handleError(response.status);
 
@@ -34,7 +34,7 @@ export function usePeopleService() {
     characterId: string;
   }) => {
     try {
-      const response = await window.fetch(`${SWAPI_URL}/${characterId}`);
+      const response = await customFetch(`${SWAPI_URL}/${characterId}`);
 
       if (!response.ok) _handleError(response.status);
 
@@ -48,8 +48,11 @@ export function usePeopleService() {
 
   const getSearchCharacter = async ({ urlQuery }: { urlQuery: string }) => {
     try {
-      const response = await window.fetch(`${SWAPI_URL}/?search=${urlQuery}`);
-      const responseToJson = await response.json();
+      const response = await customFetch(`${SWAPI_URL}/?search=${urlQuery}`);
+
+      if (!response.ok) _handleError(response.status);
+
+      const responseToJson: EndpointPeople = await response.json();
 
       if (!responseToJson.count)
         throw new Error('This character does not exist');

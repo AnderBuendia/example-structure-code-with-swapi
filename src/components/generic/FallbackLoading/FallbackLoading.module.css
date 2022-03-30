@@ -1,14 +1,7 @@
-.App {
-  width: 80%;
-  text-align: center;
+.fallbackLoading__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0 auto;
-}
-
-button {
-  font-size: calc(10px + 2vmin);
 }
