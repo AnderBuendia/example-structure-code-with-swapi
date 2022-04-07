@@ -13,7 +13,15 @@ export type AppStoreProviderProps = {
 
 export const AppStoreContext = createContext<any>({});
 
-export const useAppStore = () => useContext(AppStoreContext);
+export const useAppStore = () => {
+  const context = useContext(AppStoreContext);
+
+  if (context === undefined) {
+    throw new Error('useAppStore must be used within AppStoreProvider');
+  }
+
+  return context;
+};
 
 export const getInitialPeoplePage = () => ({
   people: [],

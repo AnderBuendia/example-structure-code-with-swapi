@@ -57,6 +57,8 @@ describe('Use Swapi API', () => {
     });
 
     render(<App />);
-    expect(await screen.findByText(/Network Error/i)).toBeInTheDocument();
+    expect(
+      await screen.findByText(/The resource you requested was not found./i)
+    ).toBeInTheDocument();
   });
 });
